@@ -9,14 +9,6 @@ Motion::Project::App.setup do |app|
   app.redgreen_style = :full
   app.files += Dir.glob(File.join(app.project_dir, 'lib/nano_store/*.rb'))
   app.pods do
-    pod 'NanoStore', '~> 2.6.0'
+    pod 'NanoStore'
   end
-end
-
-
-desc "Build the gem"
-task :gem do
-  sh "bundle exec gem build nano-store.gemspec"
-  sh "mkdir -p pkg"
-  sh "mv *.gem pkg/"
 end
