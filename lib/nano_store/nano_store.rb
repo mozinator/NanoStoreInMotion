@@ -26,11 +26,4 @@ module NanoStore
   def self.shared_store=(store)
     @shared_store = store
   end
-
-  # set debug mode
-  # if YES, debug mode is on; otherwise debug mode is disabled.
-  def self.debug=(debug)
-    NSFSetIsDebugOn(debug)
-  end
-
 end
